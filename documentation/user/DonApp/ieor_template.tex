@@ -1,0 +1,122 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{a4wide}
+\usepackage{anysize}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{wrapfig}
+\usepackage{iitbieortitle}
+\usepackage[english]{babel}
+
+%\usepackage{fullpage}
+%\usepackage{rotating}
+
+\renewcommand{\baselinestretch}{1.2} %line spacing
+\marginsize{1.2in}{1.2in}{1in}{1in}   %left right top bottom
+%\textwidth 6in
+% Title Page
+
+
+
+
+
+\pagestyle{plain}
+\def\title{IPL Match Winner Prediction}
+\def\what{CS 725: Course Project}
+\def\who{{ Aakrit Anshuman 193050064\\
+Deepak Singh 193050074\\
+Rasesh Tongia 193050015\\
+Deepak Verma 193050080\\
+}}
+\def\guide{Prof.Sunita Sarawagi}
+\begin{document}
+\titlpage
+\tableofcontents
+\newpage
+
+
+\section{\textbf{The main goals of your project}}
+	Predictor for IPL T20 match winner\\
+	Analysis of feature on their relevance to the outcome \\
+	Comparing different models of classification\\
+
+\newpage
+\section{\textbf{Literature Survey}}
+ The literature survey concluded that there was a need for a machine learning model which could predict the outcome of an IPL match before the game begins. Among all formats of cricket, Twenty20 format sees a lot of turnarounds in the momentum of the game. An over can completely change a game. Hence, predicting an outcome for a Twenty20 game is quite a challenging task. Besides, developing a prediction model for a league which is wholly based on auction is another hurdle. IPL matches cannot be predicted simply by making use of statistics over historical data solely. Because of players going under auctions, the players are bound to change their teams; which is why the ongoing performance of every player must be taken into consideration while developing a prediction model.
+
+In this work, the various factors that aﬀect the outcome of a cricket match were
+analyzed, and it was observed that home team, away team, venue, toss winner, toss decision, home team weight, away team weight, inﬂuence the win probability of a team.
+
+ 
+ \section{\textbf{Approaches:}}
+ We are started with label encoding just to train the model once for that we had to drop the column id , date, umpire 3 and player of the match. The accuracy for different models recorded as follows \\
+•	SVC 17 percent. \\
+•	Decision Tree 70 percent.\\
+•	Random Forest 64 percent.\\
+
+And we observe that accuracy was low because the model was biased toward the attribute whose value was high. Then we did one hot encoding and drop the columns umpire1 and umpire 2 which boosted our accuracy.
+We also added three more models for comparison MLP, KNN and Logistic Classifier. We observed that MLP gives highest accuracy in above all the six.
+Then we did feature analysis for which we dropped one feature at a time and checked the accuracy over 50 runs and taking a mean of them. In the real scenario we observed the relation between win by number of wickets and win by number of runs is win by number of runs is equal to 7 times the win by number of wickets. So we use this relation for feature scaling.  
+After dropping the feature we did the documentation and includes the graphs.  
+
+ \newpage
+\section{\textbf{Experiments:}}
+\subsection{\textbf{Code Description}}
+We are using the dataset matches.csv taken from Kaggle . The data is read from csv file using the python module “pandas”. We then fine tune and modify the parameters as per the requirement. For example, the categorical attributes of the dataset such as team names and year of the match are converted to one hot vectors. The objective to convert categorical into one hot is our model should not be biased.
+\subsection{\textbf{Language and environment}}
+We are using Python as our programming language. We have used different libraries such as pandas, sklearn, matplotlib. Linux and Windows Environment.  
+\subsection{\textbf{Number of lines of code}}
+For the main program we have more than 100 lines of code. For feature analysis and plotting the graph we have around 450 lines of code.
+\subsection{\textbf{Base code we started from}}
+ https://github.com/Ajmain-Inqiad/IPL-match-winner/blob/master/ipl_winner.py\\
+ https://github.com/aasis21/4th_umpire/blob/master/ML/predict_winner_before_match.py\\
+
+From here we got the idea of label encoding.
+\subsection{\textbf{Point to a URL where your code can be browsed}}
+\subsection{\textbf{Describe your experimental platform.  On what machine did you run your code, for how many hours?}}
+\subsection{\textbf{Experimental results along with commentary}}
+\includegraphics{1. Initial.jpg}
+\section{Efforts:}
+\subsection{Fraction of time spent in different parts of the project:}
+For getting initial prediction we spent about 20 percent of total time. We spent 30 percent of time for pre-processing. And about 35 percent of time for feature  analysis.15 percent of time for documentation and graph plotting
+\subsection{Challenges:}
+Improving the accuracy by appropriate pre-processing and feature analysis
+\subsection{Work Allocation:}
+Equal work done by all the team members
+\medskip
+ 
+\begin{thebibliography}{}
+\bibitem{1} 
+Tomer Eldor
+\textit{Capsule Neural Networks – Part 2: What is a Capsule?}\\. 
+\texttt{https://towardsdatascience.com/capsule-neural-networks-part-2-what-is-a-capsule-846d5418929f}
+ 
+\bibitem{2} 
+Ashutosh Kumar 
+\textit{Image recognition by Neural Networks}. . 
+\texttt{https://analyticsindiamag.com/why-do-capsule-networks-work-better-than-convolutional-neural-networks/}
+ 
+\bibitem{3} 
+Rinat Mukhometzianov and Juan Carrillo
+\\\textit{CapsNet comparative performance evaluation for image classification}
+\texttt{https://arxiv.org/pdf/1805.11195.pdf}
+
+\bibitem{4} 
+Aryan Mishra 
+\textit{Capsule Networks: The New Deep Learning Network}. . 
+\texttt{https://towardsdatascience.com/capsule-networks-the-new-deep-learning-network-bd917e6818e8}
+
+\bibitem{5} 
+Sara Sabour, Nicholas Frosst, Geoffrey Hinton
+\textit{Dynamic Routing Between Capsules}
+\\\texttt{https://arxiv.org/pdf/1710.09829.pdf}
+
+
+
+\end{thebibliography}
+ 
+
+
+
+\end{document}

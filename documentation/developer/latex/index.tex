@@ -1,0 +1,40 @@
+For setting up the database\+:
+\begin{DoxyEnumerate}
+\item Download and install Xampp from the following link \href{https://www.apachefriends.org/download.html}{\texttt{ https\+://www.\+apachefriends.\+org/download.\+html}}
+\item For Windows\+: Open Xampp Control Panel from the directory where Xamppwas installed.
+\end{DoxyEnumerate}
+
+(a) In the Xampp control panel, start the modules for ’\+Apache’ and ’\+My\+S\+Q\+L’
+
+(b) After both the modules have started, click on ’\+Admin’ button for ’\+Apache’module.
+
+(c) A webpage will open up in the browser. Click on the tab ’php\+My\+Admin’(usually on the top right).
+\begin{DoxyEnumerate}
+\item For Linux\+: Go to the directory /opt/lampp and run the command\+: sudo./xampp start4 • In a browser open localhost/phpmyadmin
+\item On the left click on option ’new’ to create a new database. Name the databaseas ’first\+D\+B’.
+\item Click on the icon for newly created Database ’first\+D\+B’ and go to the ’\+S\+Q\+L’tab.
+\item Run the following command in terminal / command prompt for enabling httpserver to respond to image requests
+\end{DoxyEnumerate}
+
+ruby -\/run -\/ehttpd . -\/p8000 \mbox{[}2019-\/11-\/27 08\+:44\+:40\mbox{]} I\+N\+FO W\+E\+Brick 1.\+4.\+2\mbox{[}2019-\/11-\/27 08\+:44\+:40\mbox{]}
+
+I\+N\+FO ruby 2.\+5.\+1 (2018-\/03-\/29) \mbox{[}x8664-\/linux-\/gnu\mbox{]}\mbox{[}2019-\/11-\/27 08\+:44\+:40\mbox{]}
+
+I\+N\+FO W\+E\+Brick\+::\+H\+T\+T\+P\+Server\+::start\+: pid=5175 port=8000
+
+
+\begin{DoxyEnumerate}
+\item Type the following commands and click on Go\+:
+\end{DoxyEnumerate}
+
+C\+R\+E\+A\+TE T\+A\+B\+LE ‘itemlist‘ (‘itemid‘ int(11) N\+OT N\+U\+LL, ‘itemname‘varchar(30) N\+OT N\+U\+LL, ‘place‘ text N\+OT N\+U\+LL D\+E\+F\+A\+U\+LT ’\+I\+I\+T\+B’,‘imagepath‘ text N\+OT N\+U\+LL, ‘description‘ text N\+OT N\+U\+LL D\+E\+F\+A\+U\+L\+T’\+No further info’, ‘contact‘ varchar(20) N\+OT N\+U\+LL D\+E\+F\+A\+U\+LT ’0’, ‘cat-\/egory‘ enum(’\+Education’,’\+Sports’,’\+Food’,’\+Clothing’,’\+Footwear’, ’\+Station-\/ary’,’\+Others’) N\+OT N\+U\+LL D\+E\+F\+A\+U\+LT ’\+Others’, ‘donorid‘ text N\+OT N\+U\+L\+L\+D\+E\+F\+A\+U\+LT ’0, ‘doneeid‘ text N\+OT N\+U\+LL D\+E\+F\+A\+U\+LT ’0’, ‘status‘ enum(’added’,’requested’,’approved’,”) N\+OT N\+U\+LL D\+E\+F\+A\+U\+LT ’added’)
+
+C\+R\+E\+A\+TE T\+A\+B\+LE ‘users‘ ( ‘id‘ int(20) N\+OT N\+U\+LL, ‘username‘ var-\/char(70) N\+OT N\+U\+LL, ‘password‘ varchar(40) N\+OT N\+U\+LL, ‘email‘ var-\/char(50) N\+OT N\+U\+LL, ‘dibscount‘ int(11) N\+OT N\+U\+LL D\+E\+F\+A\+U\+LT 0, ‘cre-\/atedat‘ datetime N\+OT N\+U\+LL, ‘updatedat‘ datetime D\+E\+F\+A\+U\+LT N\+U\+LL) For the source code\+:
+\begin{DoxyEnumerate}
+\item Find out the IP address of the system where the Xampp is being run. Usethe commands ’ipconfig’ in Windows Command Prompt Shell or ’ifconfig’ in\+Linux to obtain the IP addresses.
+\item Copy the IP address to the java file in the path\+: ̃\textbackslash{}\+Don\+App-\/master\textbackslash{}\+Don\+App\textbackslash{}src\textbackslash{}main\textbackslash{}java\textbackslash{}com\textbackslash{}journaldev\textbackslash{}\+Don\+App\textbackslash{}ipaddress.\+java in the static String variable’ipadd’.
+\item We use Android Studio which can be downloaded from \href{https://developer.android.com/studio}{\texttt{ https\+://developer.\+android.\+com/studio}}
+\item After installing Android Studio, download S\+DK for Android 8.\+0 (api 24)
+\item The entire folder ’\+Donapp-\/master’ should be used as a project for Android\+Studio.
+\item Build and Run the Project. The apk file can be made from here and installedin any smartphone for usage. 
+\end{DoxyEnumerate}

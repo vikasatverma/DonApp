@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:id="@+id/linearLayout">
+
+
+
+                <EditText android:id="@+id/editName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Item Name"
+                    android:text="a"
+                    android:textColor="#FF192133"
+                    android:textColorHint="#A0192133"
+                    android:fontFamily="sans-serif-light"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:inputType="text"/>
+
+                <EditText android:id="@+id/editPlace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:text="b"
+                    android:textColor="#FF192133"
+                    android:textColorHint="#A0192133"
+                    android:fontFamily="sans-serif-light"
+                    android:hint="Place to collect"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+
+            <EditText android:id="@+id/editDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:text="c"
+                android:textColor="#FF192133"
+                android:textColorHint="#A0192133"
+                android:fontFamily="sans-serif-light"
+                android:hint="Add Item Description"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <EditText android:id="@+id/editContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="123"
+                android:textColor="#FF192133"
+                android:textColorHint="#A0192133"
+                android:fontFamily="sans-serif-light"
+                android:hint="Contact number"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+
+            <Button
+                android:id="@+id/buttonChoose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select" />
+
+
+            <Spinner
+                android:id="@+id/itemCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"/>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:contentDescription="Item Image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/buttonUpload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload" />
+
+
+
+        </LinearLayout>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
