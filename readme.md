@@ -57,12 +57,9 @@ For setting up the database:
 
 6. Run the following command in terminal / command prompt for enabling httpserver to respond to image requests
 
-	ruby -run -ehttpd . -p8000 [2019-11-27 08:44:40] INFO WEBrick 1.4.2[2019-11-27 08:44:40]
+		ruby -run -ehttpd . -p8000 [2019-11-27 08:44:40] INFO WEBrick 1.4.2[2019-11-27 08:44:40]
 
-INFO ruby 2.5.1 (2018-03-29) [x8664-linux-gnu][2019-11-27 08:44:40]
-
-INFO WEBrick::HTTPServer::start: pid=5175 port=8000
-
+	
 7. Type the following commands and click on Go:
 
 		CREATE TABLE 'itemlist' ('itemid' int(11) NOT NULL, 'itemname'varchar(30) NOT NULL, 'place' text NOT NULL DEFAULT 'IITB','imagepath' text NOT NULL, 'description' text NOT NULL DEFAULT'No further info', 'contact' varchar(20) NOT NULL DEFAULT '0', 'cat-egory' enum('Education','Sports','Food','Clothing','Footwear', 'Station-ary','Others') NOT NULL DEFAULT 'Others', 'donorid' text NOT NULLDEFAULT '0, 'doneeid' text NOT NULL DEFAULT '0', 'status' enum('added','requested','approved',") NOT NULL DEFAULT 'added')
