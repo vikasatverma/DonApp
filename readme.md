@@ -4,9 +4,9 @@ Project Name: DonApp : The Donate App
 CSE Id's of team members:
 --------------
 
-aakritanshuman - 193050064
-
 vikasv - 193059003
+
+aakritanshuman - 193050064
 
 rasesh - 193050015
 
@@ -18,9 +18,9 @@ Github link: https://github.com/vikasatverma/DonApp
 Contributions:
 -------------
 
-Deepak - GUI, Database Handling, Search Bar
-
 Vikas - Login Page, List of Items, Marking Items(Dibs)
+
+Deepak - GUI, Database Handling, Search Bar
 
 Aakrit - Get Item Description, Documentation
 
